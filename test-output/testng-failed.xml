@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="C:/Users/naliyanage/AppData/Local/Temp/Automation_Assignment(failed)">
+    <classes>
+      <class name="products.ProductsTest">
+        <methods>
+          <include name="testSuccessfulAddToCart"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- products.ProductsTest -->
+    </classes>
+  </test> <!-- C:/Users/naliyanage/AppData/Local/Temp/Automation_Assignment(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
