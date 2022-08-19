@@ -1,15 +1,15 @@
 package pages;
 
-import base.BasePage;
+
+import controller.Controller;
 import org.openqa.selenium.By;
 
-public class LoginPage extends BasePage {
+public class LoginPage extends Controller {
 
-
-   private static final By USER_NAME=By.id("user-name");
-   private static final By PASSWORD=By.id("password");
-   private static final By LOGIN_BTN = By.id("login-button");
-   private static final By ERROR_MESSAGE = new By.ByXPath("/html/body/div/div/div[2]/div[1]/div[1]/div/form/div[3]");
+    private static final By USER_NAME = By.id("user-name");
+    private static final By PASSWORD = By.id("password");
+    private static final By LOGIN_BUTTON = By.id("login-button");
+    private static final By ERROR_MESSAGE = By.xpath("/html/body/div/div/div[2]/div[1]/div[1]/div/form/div[3]");
 
 
     private void setUsername(String username) {
@@ -21,18 +21,18 @@ public class LoginPage extends BasePage {
     }
 
 
-    private void clickLoginButton(){
-        clickElement(LOGIN_BTN);
+    private void clickLoginButton() {
+        clickElement(LOGIN_BUTTON);
     }
 
-    public void successLogin(String username,String password){
+    public void successLogin(String username, String password) {
         setUsername(username);
         setPassword(password);
         clickLoginButton();
     }
 
-    public String errorMessage(){
-        return errorText(ERROR_MESSAGE);
+    public String errorMessage() {
+        return getErrorText(ERROR_MESSAGE);
     }
 
 }
