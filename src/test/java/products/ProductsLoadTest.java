@@ -2,19 +2,20 @@ package products;
 
 import base.BaseTests;
 import login.LoginTests;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.ProductsPage;
 
 public class ProductsLoadTest extends BaseTests {
-  LoginTests loginTests=new LoginTests();
-  @Test
+    LoginTests loginTests = new LoginTests();
+    ProductsPage productsPage = new ProductsPage();
+
+    @Test
     public void testProductsLoad() {
         loginTests.testSuccessfulLogin();
-        clickElement(new By.ByXPath("/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div"));
-        Assert.assertTrue(isVisible(By.id("back-to-products")),"Product Item not loaded...");
+        productsPage.selectProduct1();
+        Assert.assertTrue(productsPage.backToProductsButtonIsVisible(), "Product Item not loaded...");
 
     }
-
 
 }

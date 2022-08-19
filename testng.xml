@@ -3,12 +3,10 @@
 <suite name="All Test Suite">
     <test verbose="2" name="C:/Users/naliyanage/AppData/Local/Temp/Automation_Assignment">
         <classes>
-
             <class name="login.LoginTests"></class>
             <class name="products.ProductsLoadTest"></class>
             <class name="cart.AddToCartTest"></class>
             <class name="login.InvalidLoginTest"></class>
-
         </classes>
     </test>
 </suite>
