@@ -9,8 +9,11 @@ public class BaseTests extends BasePage {
     public void beforeTest() {
         initWebDriver();
     }
+
     @AfterTest
     public void afterTest() {
         quitWebDriver();
     }
+
+    public String url = "https://www.saucedemo.com/";
 }
