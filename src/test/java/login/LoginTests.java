@@ -6,12 +6,10 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.ProductsPage;
 
-
 public class LoginTests extends BaseTests {
 
-    public String url = "https://www.saucedemo.com/";
     LoginPage lgnPage = new LoginPage();
-    ProductsPage productsPage=new ProductsPage();
+    ProductsPage productsPage = new ProductsPage();
 
     @Test
     public void testSuccessfulLogin() {

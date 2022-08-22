@@ -7,12 +7,11 @@ import pages.LoginPage;
 
 public class InvalidLoginTest extends BaseTests {
 
-    LoginTests loginTests = new LoginTests();
     LoginPage loginPage = new LoginPage();
 
     @Test
     public void LoginWithEmptyUsername() {
-        openPage(loginTests.url);
+        openPage(url);
         loginPage.successLogin("", "secret_sauce");
         Assert.assertEquals(loginPage.errorMessage(), "Epic sadface: Username is required");
 
@@ -20,7 +19,7 @@ public class InvalidLoginTest extends BaseTests {
 
     @Test
     public void LoginWithEmptyPassword() {
-        openPage(loginTests.url);
+        openPage(url);
         loginPage.successLogin("standard_user", "");
         Assert.assertEquals(loginPage.errorMessage(), "Epic sadface: Password is required");
 
@@ -28,7 +27,7 @@ public class InvalidLoginTest extends BaseTests {
 
     @Test
     public void LoginWithEmptyUsernameAndPassword() {
-        openPage(loginTests.url);
+        openPage(url);
         loginPage.successLogin("", "");
         Assert.assertEquals(loginPage.errorMessage(), "Epic sadface: Username is required");
     }
