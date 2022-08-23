@@ -1,5 +1,7 @@
 # Project exclude paths
-.idea/
-test-output/
-allure-results/
+/.idea/
+/allure-results/
+/test-output/
+/target/
+
 
