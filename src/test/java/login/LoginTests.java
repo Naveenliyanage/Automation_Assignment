@@ -8,13 +8,14 @@ import pages.ProductsPage;
 
 public class LoginTests extends BaseTests {
 
+    TestData testData = new TestData();
     LoginPage lgnPage = new LoginPage();
     ProductsPage productsPage = new ProductsPage();
 
     @Test
     public void testSuccessfulLogin() {
-        openPage(url);
-        lgnPage.successLogin("standard_user", "secret_sauce");
+        openPage(testData.getUrl());
+        lgnPage.successLogin(testData.getUsername(), testData.getPassword());
         Assert.assertTrue(productsPage.productsTitleIsVisible(), "Login Unsuccessful...");
 
     }

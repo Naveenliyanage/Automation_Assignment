@@ -15,5 +15,4 @@ public class BaseTests extends BasePage {
         quitWebDriver();
     }
 
-    public String url = "https://www.saucedemo.com/";
 }
