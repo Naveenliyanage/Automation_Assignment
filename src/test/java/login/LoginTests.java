@@ -6,16 +6,19 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.ProductsPage;
 
+import java.io.IOException;
+
+import static util.ConfigReader.getPassword;
+import static util.ConfigReader.getUserName;
+
 public class LoginTests extends BaseTests {
 
-    TestData testData = new TestData();
-    LoginPage lgnPage = new LoginPage();
+    LoginPage loginPage = new LoginPage();
     ProductsPage productsPage = new ProductsPage();
 
     @Test
-    public void testSuccessfulLogin() {
-        openPage(testData.getUrl());
-        lgnPage.successLogin(testData.getUsername(), testData.getPassword());
+    public void testSuccessfulLogin() throws IOException {
+        loginPage.successLogin(getUserName(), getPassword());
         Assert.assertTrue(productsPage.productsTitleIsVisible(), "Login Unsuccessful...");
 
     }
